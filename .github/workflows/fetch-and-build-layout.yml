@@ -10,7 +10,7 @@ on:
       layout_geometry:
         description: "Keyboard type"
         required: true
-        default: moonlander
+        default: moonlander/reva
 
 permissions:
   contents: write
