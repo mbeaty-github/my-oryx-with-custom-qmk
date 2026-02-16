@@ -9,6 +9,7 @@ on:
         default: "KYRep"
       layout_geometry:
         description: "Keyboard type"
+        required: true
         default: moonlander
 
 permissions:
