@@ -173,7 +173,7 @@ enum {
     MORE_TAPS
 };
 
-static tap dance_state[21];
+static tap dance_state[23];
 
 uint8_t dance_step(tap_dance_state_t *state);
 
