@@ -5,3 +5,10 @@ RGB_MATRIX_CUSTOM_KB = yes
 TAP_DANCE_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
+<<<<<<< HEAD
+=======
+
+
+# Custom QMK here
+KEY_OVERRIDE_ENABLE = yes
+>>>>>>> main

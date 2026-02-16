@@ -1,6 +1,10 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 #include "i18n.h"
+<<<<<<< HEAD
+=======
+bool caps_word_press_user(uint16_t keycode);
+>>>>>>> main
 #define MOON_LED_LEVEL LED_LEVEL
 #ifndef ZSA_SAFE_RANGE
 #define ZSA_SAFE_RANGE SAFE_RANGE
@@ -43,11 +47,19 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
+<<<<<<< HEAD
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           TD(DANCE_0),                                    TD(DANCE_6),    KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPC,        
     KC_TAB,         KC_Q,           TD(DANCE_1),    KC_E,           KC_R,           TD(DANCE_2),    TD(DANCE_3),                                    TD(DANCE_7),    KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
     CW_TOGG,        MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MEH_T(KC_D),    ALL_T(KC_F),    KC_G,           TD(DANCE_4),                                                                    TD(DANCE_8),    KC_H,           ALL_T(KC_J),    MEH_T(KC_K),    MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCLN),KC_ENTER,       
     NRW_LSPO,       KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           TD(DANCE_9),    KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       NRW_RSPC,       
     TT(1),          KC_QUOTE,       KC_LEFT_GUI,    KC_LEFT,        KC_RIGHT,       TD(DANCE_5),                                                                                                    TD(DANCE_10),   KC_UP,          KC_DOWN,        KC_TRANSPARENT, KC_TRANSPARENT, TT(1),          
+=======
+    QK_GESC,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           TD(DANCE_0),                                    TD(DANCE_5),    KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPC,        
+    KC_TAB,         KC_Q,           TD(DANCE_1),    KC_E,           KC_R,           TD(DANCE_2),    TD(DANCE_3),                                    TD(DANCE_6),    KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
+    CW_TOGG,        MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MEH_T(KC_D),    ALL_T(KC_F),    KC_G,           KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_H,           ALL_T(KC_J),    MEH_T(KC_K),    MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCLN),KC_ENTER,       
+    SC_LSPO,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           TD(DANCE_7),    KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       SC_RSPC,       
+    TT(1),          KC_QUOTE,       KC_LEFT_GUI,    KC_LEFT,        KC_RIGHT,       TD(DANCE_4),                                                                                                    TD(DANCE_8),    KC_UP,          KC_DOWN,        KC_TRANSPARENT, KC_TRANSPARENT, TT(1),          
+>>>>>>> main
     KC_SPACE,       KC_TAB,         LALT(KC_LEFT_CTRL),                RALT(KC_RIGHT_CTRL),KC_DELETE,      KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
@@ -71,6 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
+<<<<<<< HEAD
 
 extern rgb_config_t rgb_matrix_config;
 
@@ -80,10 +93,18 @@ RGB hsv_to_rgb_with_value(HSV hsv) {
   return (RGB){ f * rgb.r, f * rgb.g, f * rgb.b };
 }
 
+=======
+extern rgb_config_t rgb_matrix_config;
+
+>>>>>>> main
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {162,229,183}, {0,0,0}, {0,0,0}, {162,255,177}, {162,229,183}, {162,229,183}, {162,229,183}, {0,0,0}, {162,255,177}, {74,255,206}, {0,245,245}, {41,255,255}, {74,255,206}, {162,255,177}, {162,229,183}, {162,229,183}, {162,229,183}, {152,255,255}, {162,255,177}, {0,0,0}, {162,229,183}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {162,255,177}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
@@ -99,8 +120,14 @@ void set_layer_color(int layer) {
     if (!hsv.h && !hsv.s && !hsv.v) {
         rgb_matrix_set_color( i, 0, 0, 0 );
     } else {
+<<<<<<< HEAD
         RGB rgb = hsv_to_rgb_with_value(hsv);
         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
+=======
+        RGB rgb = hsv_to_rgb( hsv );
+        float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+        rgb_matrix_set_color( i, f * rgb.r, f * rgb.g, f * rgb.b );   
+>>>>>>> main
     }
   }
 }
@@ -109,6 +136,7 @@ bool rgb_matrix_indicators_user(void) {
   if (rawhid_state.rgb_control) {
       return false;
   }
+<<<<<<< HEAD
   if (!keyboard_config.disable_layer_led) { 
     switch (biton32(layer_state)) {
       case 1:
@@ -128,6 +156,63 @@ bool rgb_matrix_indicators_user(void) {
   return true;
 }
 
+=======
+  if (keyboard_config.disable_layer_led) { return false; }
+  switch (biton32(layer_state)) {
+    case 1:
+      set_layer_color(1);
+      break;
+   default:
+    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+      rgb_matrix_set_color_all(0, 0, 0);
+    break;
+  }
+  return true;
+}
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        case KC_A ... KC_Z:
+        case KC_MINS:
+        case TD(DANCE_0):
+        case TD(DANCE_1):
+        case TD(DANCE_2):
+        case TD(DANCE_3):
+        case TD(DANCE_4):
+        case TD(DANCE_5):
+        case TD(DANCE_6):
+        case TD(DANCE_7):
+        case TD(DANCE_8):
+        case TD(KC_MINUS):
+            add_weak_mods(MOD_BIT(KC_LSFT));  
+            return true;
+        default:
+            return false;
+    }
+}
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case NRW_LSPO:
+      perform_space_cadet(record, keycode, KC_LSFT, KC_LSFT, KC_8);
+      return false;
+    case NRW_RSPC:
+      perform_space_cadet(record, keycode, KC_LSFT, KC_LSFT, KC_9);
+      return false;
+
+    case RGB_SLD:
+        if (rawhid_state.rgb_control) {
+            return false;
+        }
+        if (record->event.pressed) {
+            rgblight_mode(1);
+        }
+        return false;
+  }
+  return true;
+}
+>>>>>>> main
 
 
 typedef struct {
@@ -136,12 +221,21 @@ typedef struct {
 } tap;
 
 enum {
+<<<<<<< HEAD
     SINGLE_TAP = 1,      
     SINGLE_HOLD,         
     DOUBLE_TAP,          
     DOUBLE_HOLD,         
     DOUBLE_SINGLE_TAP,   
     MORE_TAPS            
+=======
+    SINGLE_TAP = 1,
+    SINGLE_HOLD,
+    DOUBLE_TAP,
+    DOUBLE_HOLD,
+    DOUBLE_SINGLE_TAP,
+    MORE_TAPS
+>>>>>>> main
 };
 
 static tap dance_state[23];
@@ -976,6 +1070,7 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_21] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_21, dance_21_finished, dance_21_reset),
         [DANCE_22] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_22, dance_22_finished, dance_22_reset),
 };
+<<<<<<< HEAD
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -1014,3 +1109,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+=======
+>>>>>>> main

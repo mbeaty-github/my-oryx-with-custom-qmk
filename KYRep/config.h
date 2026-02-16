@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define FLOW_TAP_TERM 100
 #undef TAPPING_TERM
 #define TAPPING_TERM 150
@@ -5,6 +6,14 @@
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define HOLD_ON_OTHER_KEY_PRESS
 #define SERIAL_NUMBER "KYRep/wOzWlP"
+=======
+#define FLOW_TAP_TERM 150
+#undef TAPPING_TERM
+#define TAPPING_TERM 280
+
+#define USB_SUSPEND_WAKEUP_DELAY 0
+#define SERIAL_NUMBER "KYRep/qmyv3y"
+>>>>>>> main
 #define LAYER_STATE_8BIT
 
 #define RGB_MATRIX_STARTUP_SPD 60
